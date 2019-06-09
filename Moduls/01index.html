@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        .menu {
+            height: 410px;
+            width: 160px;
+            margin: auto;
+            padding: 20px;
+            background-color: lightgray;
+            border-style: solid;
+            border-color: #b5bbbd;
+            border-width: 1px 1px 1px 1px;
+        }
+
+        h1 {
+            font-size: 15px;
+        }
+
+        form {
+            position: absolute;
+            width: 170px;
+            height: 100%;
+            margin: auto 0;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        input[type=submit] {
+            margin-top: 25px;
+        }
+
+        input.invalid {
+            background-color: Pink;
+        }
+
+        input.valid {
+            background-color: LightGreen;
+        }
+    </style>
+     <script src="newUserRegistration.js"></script>
+     <script src="watermark.js"></script>
+</head>
+
+<body>
+        
+    <!-- watermark -->
+    <form>
+        <input type="text" name="login" data-watermark="Введите свой логин" />
+        <input type="text" name="pass" data-watermark="Введите свой пароль" />
+        <input type="text" name="AgPass" data-watermark="Повторите свой пароль" />
+    </form>
+
+
+    <!-- Регистрация -->
+    <div class="menu">
+        <h1>Регистрация :</h1>
+        <form name="registration">
+            имя:
+            <input type="text" name="Fname" />
+            фамилия:
+            <input type="text" name="Lname" />
+            логин:
+            <input type="text" name="login" />
+            пароль:
+            <input type="password" name="pass" />
+            подтверждение пароля:
+            <input type="password" name="againPass" />
+            email:
+            <input type="email" name="email" />
+            пол:
+            <p>
+                <input type="radio" name="sex" value="man" />мужчина<br />
+                <input type="radio" name="sex" value="woman" />женщина
+            </p>
+            <input type="submit" value="Отправить" />
+        </form>
+    </div>
+    <p id="errTex"></p>
+</body>
+
+</html>
